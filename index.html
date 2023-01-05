@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+    
+    </head>
+
+   <body>
+    
+        <div class="container">
+        
+            <div class="total_div" id="total_div">
+            <div class="header">
+            <p>50/30/20</p>
+            <p>Budget Calculator</p>
+                </div>
+            <div class="row_cont">
+         
+                
+            <div id="row_table">
+            <p class="left_col">Income</p>
+            <p class="right_col"id="income_total">$0</p>
+            </div>
+            
+              
+                
+             <div id="row_table">
+            <p class="left_col">Needs:</p>
+            <p class="right_col"id="needs_total">$0</p>
+                </div>
+                 
+                 <div id="row_table"> 
+                
+            <p class="left_col">Wants:</p>
+            <p class="right_col"id="wants_total">$0</p>
+                </div>
+                
+                <div id="row_table"> 
+           <p class="left_col">Savings:</p>
+            <p class="right_col"id="savings_total">$0</p>
+                </div>
+                
+                 <div id="row_table"> 
+            <p class="left_col">Total Expenses:</p>
+            <p class="right_col"id="combined_total">$0</p>
+                     
+                </div>
+                <div id="row_table">
+            <p class="left_col" id="line">Remaining Income:</p>
+            <p class="right_col"id="run_income">$0</p>
+               </div>
+                
+            </div>
+                
+            <div class="graph_cont" id="graph_cont">
+                <div class="graph_spacer"></div>
+              <div class="graph_frame"id="graph_frame">
+                <div class="graph">
+                <div id="needs_graph"></div>
+                    <div id="wants_graph"></div>
+                    <div id="savings_graph"></div>
+                
+                </div>
+                </div>
+                <div class="graph_spacer"></div>
+            <p class="graph_head">Needs</p>
+            <p class="graph_data" id="needs_g">-</p>
+            <p class="graph_head">Wants</p>
+            <p class="graph_data" id="wants_g">-</p>
+            <p class="graph_head">Savings</p>
+            <p class="graph_data" id="savings_g">-</p>
+                </div>
+                
+            </div>
+            
+            <div class="income_div" id="income_div">
+                
+             <p id="card_head">Enter Monthly Income</p>
+                
+            <input class="box_1" id="income_field" type="number"placeholder="$0">
+            
+            <div class="button_group" id="income_button">   
+            <button onclick="income_calc();hide_income();" class="next_button" id="btn">Next</button>
+                </div>
+            
+            </div>
+        
+            <div class="info_div" id="needs_div">
+                 <p id="card_head">Needs</p>
+    
+    <p id="label_1">Rent</p> 
+    <p id="label_2">Utilities</p>
+    <input class="box_1" id="field1_1" type="number" placeholder="$0">
+    <input class="box_2" id="field1_2" type="number" placeholder="$0">
+    
+     <p id="label_1">Groceries</p> 
+    <p id="label_2">Insurance</p> 
+    <input class="box_1" id="field1_3" type="number" placeholder="$0">
+    <input class="box_2" id="field1_4" type="number" placeholder="$0">
+    
+    <p id="label">Transportation & Other</p> 
+    <input class="box_1" id="field1_5" type="number" placeholder="$0">
+            
+        <div class="button_group">        
+        <button onclick="back_to_income(); refresh_p();" id="back">Back</button>
+        <button onclick="needs_calc(); hide_needs(); refresh_p();"class="next_button" id="btn1">Next</button>
+                </div>
+                
+            
+            </div>
+           <div class="info_div" id="wants_div">
+              <p id="card_head">Wants</p>
+    
+    <p id="label_1">New Items</p> 
+    <p id="label_2">Travel Fund</p>
+    <input class="box_1"id="field2_1" type="number" placeholder="$0">
+    <input class="box_2"id="field2_2" type="number" placeholder="$0">
+    
+     <p id="label_1">Restaurants & Bars</p> 
+         <p id="label_2">Entertainment</p> 
+    <input class="box_1"id="field2_3" type="number" placeholder="$0">
+    <input class="box_2"id="field2_4" type="number" placeholder="$0">
+        
+     <p id="label">Other</p>           
+    <input class="box_1"id="field2_5" type="number" placeholder="$0">
+               
+            <div class="button_group"> 
+            <button onclick="back_to_needs(); refresh_p();" id="back">Back</button>
+            <button onclick="wants_calc(); hide_wants(); refresh_p();" class="next_button"id="btn2">Next</button>
+               </div>
+            </div>
+            
+            <div class="info_div" id="savings_div">
+            <p>Savings</p>
+     <p id="label_1">Student Loans</p> 
+    <p id="label_2">Retirement</p>            
+    <input class="box_1"id="field3_1" type="number" placeholder="$0">
+    <input class="box_2"id="field3_2" type="number" placeholder="$0">
+     <p id="label_1">Other Debt</p>            
+    <input class="box_1"id="field3_3" type="number" placeholder="$0">
+            
+                
+            <div class="button_group">     
+            <button onclick="back_to_wants();refresh_p();" id="back">Back</button>
+            <button onclick="savings_calc(); hide_savings();refresh_p();" class="next_button"id="btn3">Next</button>
+                </div>
+            </div>
+            
+            <div class="info_div" id="final_div">
+            <p>Report Final</p>
+                
+                 <p id="needs_p">NeedsP</p>
+            <p id="wants_p">WantsP</p>
+            <p id="savings_p">SavingsP</p>
+            <button onclick="back_to_savings()" id="back">Back</button>
+            
+                
+            </div>
+      
+        
+        </div>
+        
+    
+    </body>
+    
+    <script src="index.js"></script>
+   
+    
+</html>

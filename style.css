@@ -1,0 +1,559 @@
+body{
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+ margin-top: 50px;
+     
+}
+
+.header {
+    height:40px;
+}
+.info_div {
+    width: 600px;
+    height:300px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  margin-bottom: 20px;
+    display:inline-block;
+    
+    
+}
+
+#needs_div {
+    display: none;
+}
+#wants_div {
+    display: none;
+}
+#savings_div {
+    display: none;
+}
+#final_div {
+    display: none;
+}
+.total_div {
+ width: 600px;
+    height:300px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: white;
+    display:inline-block;
+     padding:10px;
+}
+
+.income_div {
+ width: 600px;
+    height:100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding:10px;
+    display:inline-block;
+}
+
+.next_button {
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 80px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #3e64ff;
+    background-color:#3e64ff;
+    color:white; 
+       -webkit-box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+}
+
+.next_button:hover {
+     cursor: pointer;
+    transition: .3s;
+       -webkit-box-shadow: 0px 0px 0px -0px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0px 0px 0px -0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 0px -0px rgb(0 0 0 / 12%);
+
+}
+
+#back {
+        font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 80px;
+    border-radius: 2px;
+   margin-right:5px;
+    border: 1.5px solid #3e64ff;
+    background-color:white;
+    color:#3e64ff; 
+  
+}
+#back:hover {
+    cursor: pointer;
+    transition: .4s;
+    background-color:#3e64ff;
+    color:white;
+  
+}
+
+.row_cont {
+ font-size: 14px;
+  display:inline-block;
+    margin-top: 60px;
+}
+
+
+    
+
+#row_table {
+   height:20px;
+    width:250px;
+  
+}
+
+#line {
+    border-top:1px solid lightgray; 
+}
+#run_income {
+    border-top:1px solid lightgray; 
+}
+
+.left_col{
+    display: inline-block;
+    margin-top:-10px;
+    width:70%;
+}
+.right_col {
+    display: inline-block;
+    margin-top:-10px;
+    width:20%;
+   margin-right: 0px;
+    
+    text-align: right;
+   
+}
+
+.graph_cont{
+   
+
+    height:280px;
+    margin-top: -230px;
+    width:320px;
+    margin-left:260px;
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+   
+}
+
+
+.graph_spacer {
+    height:20px;
+    width:100%;
+}
+.graph_frame{
+    height:40px;
+    width:320px;
+  
+    background-color:lightgrey;
+     display: block;
+    
+    
+}
+.graph{
+    height:40px;
+    width:305px;
+   margin-right: auto;
+    margin-left: auto;
+
+}
+
+#needs_graph {
+    background-color: green;
+    height: 40px;
+    margin-top:-50px;
+    width:0px;
+    padding: 0px;
+    
+    display: inline-block;
+    transition: width 2s;
+}
+
+#wants_graph{
+    background-color: red;
+    height: 40px;
+    width:0px;
+     padding: 0px;
+    margin-left: -5px;
+    display: inline-block;
+     transition: width 2s;
+}
+
+#savings_graph {
+    background-color: orange;
+    height: 40px;
+    width:0px;
+    margin-left: -5px;
+    display: inline-block;
+    transition: width 2s;
+}
+
+.graph_head {
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+}
+.graph_data {
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+
+
+.box_1 {
+    margin-left: 10px;
+    width: 280px;
+    height: 40px;
+    margin-top:-10px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.box_1:focus {
+    outline-width: 0;  
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.box_2 {
+    width: 280px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: 310px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+
+.box_2:focus {
+
+    outline-width: 0;  
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#label_1{
+    
+}
+#label_2 {
+    margin-left:310px;
+    margin-top: -40px;
+}
+
+.button_group{
+    width: 200px;
+    margin-left:420px;
+    margin-top: -40px;
+    
+}
+
+#card_head{
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#income_button{
+    margin-left:300px;
+}
+
+/**************************************************/
+
+@media (max-width: 650px) {
+body{
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+ margin-top: 20px;
+     
+}
+
+.header {
+    height:40px;
+}
+.info_div {
+    width: 300px;
+    height:360px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  margin-bottom: 20px;
+    margin-top: 300px;
+    display:inline-block;
+    
+     margin-left: auto;
+    margin-right: auto;
+}
+
+#needs_div {
+    display: none;
+}
+#wants_div {
+    display: none;
+}
+#savings_div {
+    display: none;
+    height:270px;
+}
+#final_div {
+    display: none;
+}
+.total_div {
+ width: 300px;
+    height:260px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: white;
+    display:inline-block;
+     padding:10px;
+     margin-left: auto;
+    margin-right: auto;
+}
+
+.income_div {
+ width: 300px;
+    margin-top: 300px;
+    height:100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding:10px;
+    display:inline-block;
+     margin-left: auto;
+    margin-right: auto;
+}
+
+.next_button {
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 80px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #3e64ff;
+    background-color:#3e64ff;
+    color:white; 
+       -webkit-box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+}
+
+.next_button:hover {
+     cursor: pointer;
+    transition: .3s;
+       -webkit-box-shadow: 0px 0px 0px -0px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0px 0px 0px -0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 0px -0px rgb(0 0 0 / 12%);
+
+}
+
+#back {
+        font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 80px;
+    border-radius: 2px;
+   margin-right:5px;
+    border: 1.5px solid #3e64ff;
+    background-color:white;
+    color:#3e64ff; 
+  
+}
+#back:hover {
+    cursor: pointer;
+    transition: .4s;
+    background-color:#3e64ff;
+    color:white;
+  
+}
+
+.row_cont {
+ font-size: 14px;
+  display:inline-block;
+    margin-top: 60px;
+}
+
+
+    
+
+#row_table {
+   height:20px;
+    width:250px;
+  
+}
+
+#line {
+    border-top:1px solid lightgray; 
+}
+#run_income {
+    border-top:1px solid lightgray; 
+}
+
+.left_col{
+    display: inline-block;
+    margin-top:-10px;
+    width:70%;
+}
+.right_col {
+    display: inline-block;
+    margin-top:-10px;
+    width:20%;
+   margin-right: 0px;
+    
+    text-align: right;
+   
+}
+
+.graph_cont{
+   
+
+    height:280px;
+    margin-top: 50px;
+    width:320px;
+    margin-left:-10px;
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  
+    margin-right: auto;
+   
+}
+
+
+.graph_spacer {
+    height:20px;
+    width:100%;
+}
+.graph_frame{
+    height:40px;
+    width:320px;
+  
+    background-color:lightgrey;
+     display: block;
+    
+    
+}
+.graph{
+    height:40px;
+    width:305px;
+   margin-right: auto;
+    margin-left: auto;
+
+}
+
+#needs_graph {
+    background-color: green;
+    height: 40px;
+    margin-top:-50px;
+    width:0px;
+    padding: 0px;
+    
+    display: inline-block;
+    transition: width 2s;
+}
+
+#wants_graph{
+    background-color: red;
+    height: 40px;
+    width:0px;
+     padding: 0px;
+    margin-left: -5px;
+    display: inline-block;
+     transition: width 2s;
+}
+
+#savings_graph {
+    background-color: orange;
+    height: 40px;
+    width:0px;
+    margin-left: -5px;
+    display: inline-block;
+    transition: width 2s;
+}
+
+.graph_head {
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+}
+.graph_data {
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+
+
+.box_1 {
+    margin-left: 10px;
+    width: 120px;
+    height: 40px;
+    margin-top:-10px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.box_1:focus {
+    outline-width: 0;  
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.box_2 {
+    width: 120px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: 40px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+
+.box_2:focus {
+
+    outline-width: 0;  
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#label_1{
+    
+}
+#label_2 {
+    margin-left:160px;
+    margin-top: -40px;
+}
+
+.button_group{
+    width: 200px;
+    margin-left:60px;
+    margin-top: 10px;
+    
+}
+
+#card_head{
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#income_button{
+    margin-left:210px;
+    margin-top: -40px;
+}
+    
+    
+}
+
+
